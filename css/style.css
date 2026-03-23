@@ -1171,12 +1171,13 @@ footer {
   .photo-ring-inner { inset: -14px; }
   .photo-certs { max-width: 260px; margin: 0 auto; }
   .hero-name {
-    font-size: clamp(32px, 9vw, 52px);
+    font-size: clamp(32px, 7vw, 52px);
     letter-spacing: -1px;
-    word-break: break-word;
-    overflow-wrap: break-word;
+    word-break: normal;
+    overflow-wrap: normal;
+    max-width: 100%;
   }
-  .hero-name .surname { word-break: break-word; }
+  .hero-name .surname { word-break: normal; }
   .hero-role {
     font-size: 11px;
     letter-spacing: 1px;
@@ -1257,17 +1258,17 @@ footer {
   #hero::before, #hero::after { display: none; }
   .hero-eyebrow { font-size: 9px; margin-bottom: 14px; }
   .hero-name {
-    font-size: clamp(26px, 8.5vw, 40px);
-    letter-spacing: -0.5px;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
+    font-size: 34px;
+    letter-spacing: -0.3px;
+    line-height: 1.05;
     max-width: 100%;
+    overflow: visible;
   }
   .hero-name .surname {
     display: block;
-    word-break: normal;
-    overflow-wrap: normal;
+    font-size: 34px;
+    letter-spacing: -0.3px;
+    line-height: 1.05;
   }
   .hero-role {
     font-size: 10px;
