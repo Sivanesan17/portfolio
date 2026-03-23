@@ -1257,17 +1257,17 @@ footer {
   #hero::before, #hero::after { display: none; }
   .hero-eyebrow { font-size: 9px; margin-bottom: 14px; }
   .hero-name {
-    font-size: clamp(30px, 10vw, 46px);
-    letter-spacing: -1px;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
+    font-size: clamp(26px, 8.5vw, 40px);
+    letter-spacing: -0.5px;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
     max-width: 100%;
   }
   .hero-name .surname {
     display: block;
-    word-break: break-word;
-    overflow-wrap: break-word;
+    word-break: normal;
+    overflow-wrap: normal;
   }
   .hero-role {
     font-size: 10px;
