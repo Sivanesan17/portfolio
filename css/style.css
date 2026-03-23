@@ -211,10 +211,11 @@ section + section { border-top: 1px solid var(--border-dim); }
 
 .hero-layout {
   display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 72px;
+  grid-template-columns: 1fr 280px;
+  gap: 56px;
   align-items: center;
   width: 100%;
+  min-width: 0;
 }
 
 .hero-eyebrow {
@@ -1258,17 +1259,16 @@ footer {
   #hero::before, #hero::after { display: none; }
   .hero-eyebrow { font-size: 9px; margin-bottom: 14px; }
   .hero-name {
-    font-size: 34px;
-    letter-spacing: -0.3px;
-    line-height: 1.05;
+    font-size: min(8vw, 34px);
+    letter-spacing: 0px;
+    line-height: 1.1;
     max-width: 100%;
-    overflow: visible;
   }
   .hero-name .surname {
     display: block;
-    font-size: 34px;
-    letter-spacing: -0.3px;
-    line-height: 1.05;
+    font-size: min(8vw, 34px);
+    letter-spacing: 0px;
+    line-height: 1.1;
   }
   .hero-role {
     font-size: 10px;
