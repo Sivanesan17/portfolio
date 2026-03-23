@@ -7,11 +7,10 @@
 <meta name="description" content="Cybersecurity Analyst and SOC Analyst based in Coimbatore, India. Specialising in EASM, Dark Web Intelligence, Threat Detection, and VAPT. Open to relocation.">
 <meta property="og:title" content="Sivanesan Muthukumar | Cybersecurity Analyst">
 <meta property="og:description" content="Security engineering professional transitioning into SOC and Cybersecurity Analyst roles. 1 year 8 months of hands-on experience.">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -902,23 +901,30 @@ section + section { border-top: 1px solid var(--border-dim); }
 }
 
 /* Credly badge embed area */
-.credly-embed {
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 0;
-  height: auto;
-}
-
 .cert-card {
   background: var(--bg-surface);
-  padding: 24px;
+  padding: 22px;
   transition: background 0.2s;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  gap: 8px;
+}
+
+.credly-badge-wrap {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 4px;
+  flex-shrink: 0;
+}
+
+.credly-badge-wrap img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
 }
 
 .cert-name {
@@ -1414,7 +1420,7 @@ footer {
         <a href="https://github.com/Sivanesan17" target="_blank" rel="noopener" class="proj-link">View on GitHub</a>
       </div>
 
-      <div class="proj-card">
+      <div class="proj-card" style="grid-column:span 2;">
         <div class="proj-num">04</div>
         <div class="proj-title">View All Projects on GitHub</div>
         <p class="proj-desc">VAPT notes, methodology documentation, SOC learning resources, and more — all available on my GitHub profile.</p>
@@ -1498,20 +1504,15 @@ footer {
       </div>
 
       <!-- Google Professional Cybersecurity — Credly Badge -->
+      <!-- HOW TO UPDATE: Go to credly.com > your Google badge > Share > copy the badge image URL
+           Replace YOUR_GOOGLE_BADGE_IMAGE_URL below with that URL
+           Replace YOUR_GOOGLE_BADGE_PAGE_URL with the badge public page URL -->
       <div class="cert-card">
-        <div class="credly-embed">
-          <!-- Replace data-badge-id with your actual Google cert badge ID from Credly -->
-          <!-- Go to credly.com > your badge > Share > Embed > copy the data-badge-id value -->
-          <div data-iframe-width="150" data-iframe-height="270"
-               data-share-badge-id="b35ea527-9040-4a41-97da-bb74ba986643"
-               data-share-badge-host="https://www.credly.com">
-          </div>
-          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-          <!-- Fallback shown if badge ID not set -->
-          <div id="google-fallback" style="text-align:center;">
-            <div class="cert-icon-box" style="margin:0 auto 10px;">G</div>
-          </div>
-        </div>
+        <a href="https://www.credly.com/badges/b35ea527-9040-4a41-97da-bb74ba986643/public_url" target="_blank" rel="noopener" class="credly-badge-wrap">
+          <img src="assets/google-cybersecurity-professional-certificate-v2.png"
+               alt="Google Professional Cybersecurity Certificate badge"
+               onerror="this.parentElement.innerHTML='<div class=cert-icon-box>G</div>'">
+        </a>
         <div class="cert-name">Professional Cybersecurity Certificate</div>
         <div class="cert-issuer">Google</div>
         <span class="cert-status">Verified via Credly</span>
@@ -1532,18 +1533,15 @@ footer {
       </div>
 
       <!-- Cisco CCNA — Credly Badge -->
+      <!-- HOW TO UPDATE: Go to credly.com > your Cisco badge > Share > copy the badge image URL
+           Replace YOUR_CISCO_BADGE_IMAGE_URL below with that URL
+           Replace YOUR_CISCO_BADGE_PAGE_URL with the badge public page URL -->
       <div class="cert-card">
-        <div class="credly-embed">
-          <!-- Replace data-badge-id with your actual Cisco CCNA badge ID from Credly -->
-          <div data-iframe-width="150" data-iframe-height="270"
-               data-share-badge-id="d73995ff-0385-4c00-a8c6-35065e0f6585"
-               data-share-badge-host="https://www.credly.com">
-          </div>
-          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-          <div id="cisco-fallback" style="text-align:center;">
-            <div class="cert-icon-box" style="margin:0 auto 10px;">C</div>
-          </div>
-        </div>
+        <a href="https://www.credly.com/badges/d73995ff-0385-4c00-a8c6-35065e0f6585/public_url" target="_blank" rel="noopener" class="credly-badge-wrap">
+          <img src="assets/ccna-introduction-to-networks.png"
+               alt="Cisco CCNAv7 Introduction to Networks badge"
+               onerror="this.parentElement.innerHTML='<div class=cert-icon-box>C</div>'">
+        </a>
         <div class="cert-name">Introduction to Networks (CCNAv7)</div>
         <div class="cert-issuer">Cisco</div>
         <span class="cert-status">Verified via Credly</span>
