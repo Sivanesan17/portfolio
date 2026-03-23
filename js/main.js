@@ -1,31 +1,3 @@
-function copyEmail(e) {
-  e.preventDefault();
-  const email = 'sivanesa2016@gmail.com';
-  const label = document.getElementById('copy-email-label');
- 
-  navigator.clipboard.writeText(email).then(() => {
-    label.textContent = 'Copied!';
-    document.getElementById('copy-email').style.borderColor = 'var(--green)';
-    document.getElementById('copy-email').style.color = 'var(--green)';
-    setTimeout(() => {
-      label.textContent = email;
-      document.getElementById('copy-email').style.borderColor = '';
-      document.getElementById('copy-email').style.color = '';
-    }, 2000);
-  }).catch(() => {
-    // Fallback for older browsers
-    const el = document.createElement('textarea');
-    el.value = email;
-    el.style.position = 'absolute';
-    el.style.left = '-9999px';
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-    label.textContent = 'Copied!';
-    setTimeout(() => { label.textContent = email; }, 2000);
-  });
-}
 // Form submission handler
 async function handleSubmit(e) {
   e.preventDefault();
