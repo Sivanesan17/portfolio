@@ -22,7 +22,7 @@
      ============================================ -->
 <nav class="z1">
   <a href="#hero" class="nav-id">Sivanesan Muthukumar</a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -34,7 +34,20 @@
     <span class="avail-dot"></span>
     Open to Work
   </div>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#about"          onclick="closeMenu()">About</a>
+  <a href="#experience"     onclick="closeMenu()">Experience</a>
+  <a href="#projects"       onclick="closeMenu()">Projects</a>
+  <a href="#skills"         onclick="closeMenu()">Skills</a>
+  <a href="#certifications" onclick="closeMenu()">Certifications</a>
+  <a href="#contact"        onclick="closeMenu()">Contact</a>
+</div>
 
 <!-- ============================================
      HERO
@@ -56,7 +69,7 @@
         <p class="hero-intro">
           Security engineering professional with 1 year 8 months of hands-on experience, 
           transitioning into SOC and Cybersecurity Analyst roles. I contributed to building 
-          real security tooling not just operating it.
+          real security tooling — not just operating it.
         </p>
 
         <div class="hero-stats">
@@ -118,7 +131,7 @@
       <div class="exp-card">
         <div class="exp-card-label">Attack Surface</div>
         <div class="exp-card-title">EASM Platform Contribution</div>
-        <div class="exp-card-desc">Contributed to building a continuous asset monitoring system covering subdomains, DNS records, open ports, IP reputation, and email exposure. Implemented the severity based risk scoring model for all findings.</div>
+        <div class="exp-card-desc">Contributed to building a continuous asset monitoring system covering subdomains, DNS records, open ports, IP reputation, and email exposure. Implemented the severity-based risk scoring model for all findings.</div>
         <div class="exp-card-metric">50+ assets monitored continuously</div>
       </div>
       <div class="exp-card">
@@ -143,8 +156,8 @@
 
     <div class="about-prose">
       <p>
-        With 1 year 8 months in security engineering at Rezilyens LLC — I am now transitioning into 
-        <strong>Cybersecurity Analyst</strong> and <strong>SOC Analyst (L1/L2)</strong> roles. 
+        With 1 year 8 months in security engineering at Rezilyens LLC — reporting directly to the CISO — 
+        I am now transitioning into <strong>Cybersecurity Analyst</strong> and <strong>SOC Analyst (L1/L2)</strong> roles. 
         My background in building security tooling gives me an understanding of what is upstream of the alerts 
         that most entry-level SOC analysts don't have.
       </p>
@@ -177,11 +190,11 @@
           <span>Full-time &nbsp;·&nbsp; Coimbatore &nbsp;·&nbsp; Reporting to CISO</span>
         </div>
         <ul class="tl-bullets">
-          <li>Contributed to building the <strong>EASM platform</strong> worked on subdomain enumeration, DNS record analysis, open port scanning, and IP reputation checks across <strong>50+ organisational assets</strong> to identify live attack paths and misconfigurations before exploitation.</li>
-          <li>Built the <strong>severity based risk scoring model</strong> for EASM findings  classifying results by impact level (e.g. permissive SPF +all policy equals High severity) to drive prioritised remediation for the security team.</li>
-          <li>Performed <strong>dark web credential monitoring</strong> by manually searching breach forums and scraping leaked credential sources to detect whether organisational emails were exposed identified <strong>100+ credential exposures</strong>, reducing detection time from weeks to hours.</li>
-          <li>Collaborated with the <strong>red team to validate EASM findings</strong> for accuracy; conducted <strong>website VAPT</strong> assessing for OWASP Top 10 vulnerabilities (SQLi, XSS, misconfigurations) using Burp Suite and Nmap.</li>
-          <li>Ran <strong>Trivy security scans</strong> on the development team Dockerfiles and filesystem codebase identifying vulnerabilities and delivering structured weekly reports to component owners.</li>
+          <li>Contributed to building the <strong>EASM platform</strong> — worked on subdomain enumeration, DNS record analysis, open port scanning, and IP reputation checks across <strong>50+ organisational assets</strong> to identify live attack paths and misconfigurations before exploitation.</li>
+          <li>Built the <strong>severity-based risk scoring model</strong> for EASM findings — classifying results by impact level (e.g. permissive SPF +all policy equals High severity) to drive prioritised remediation for the security team.</li>
+          <li>Performed <strong>dark web credential monitoring</strong> by manually searching breach forums and scraping leaked credential sources to detect whether organisational emails were exposed — identified <strong>100+ credential exposures</strong>, reducing detection time from weeks to hours.</li>
+          <li>Collaborated with the <strong>red team to validate EASM findings</strong> for accuracy; independently conducted <strong>website VAPT</strong> assessing for OWASP Top 10 vulnerabilities (SQLi, XSS, misconfigurations) using Burp Suite and Nmap.</li>
+          <li>Ran <strong>Trivy security scans</strong> on the development team Dockerfiles and filesystem codebase — identifying vulnerabilities and delivering structured weekly reports to component owners.</li>
           <li>Monitored application infrastructure health using <strong>Prometheus and Grafana</strong> dashboards across frontend, backend, and database components.</li>
         </ul>
       </div>
@@ -197,7 +210,7 @@
           <span>Internship &nbsp;·&nbsp; Mumbai, India</span>
         </div>
         <ul class="tl-bullets">
-          <li>Performed web application penetration testing identifying, exploiting, and documenting <strong>OWASP Top 10</strong> vulnerabilities including SQLi, XSS, and broken authentication using Burp Suite.</li>
+          <li>Performed web application penetration testing — identifying, exploiting, and documenting <strong>OWASP Top 10</strong> vulnerabilities including SQLi, XSS, and broken authentication using Burp Suite.</li>
           <li>Produced structured <strong>vulnerability reports with CVSS severity scores</strong>, proof-of-concept evidence, and remediation recommendations.</li>
         </ul>
       </div>
@@ -219,11 +232,11 @@
       <div class="proj-card featured">
         <div style="display:flex;flex-direction:column;gap:16px;">
           <div class="proj-num">01 / Featured</div>
-          <div class="proj-title">External Attack Surface Management </div>
+          <div class="proj-title">External Attack Surface Management — Architecture and Risk Scoring</div>
           <p class="proj-desc">
             Contributed to building a continuous asset monitoring platform. 
-            Documents the asset discovery methodology, and severity scoring 
-            model used to classify EASM findings by impact level from permissive email 
+            Documents the architecture, asset discovery methodology, and severity scoring 
+            model used to classify EASM findings by impact level — from permissive email 
             policies to exposed subdomains and open ports.
           </p>
           <div class="proj-outcomes">
@@ -263,10 +276,10 @@
       <div class="proj-card">
         <div class="proj-num">03</div>
         <div class="proj-title">Docker Security Scanning Workflow</div>
-        <p class="proj-desc">Trivy-based Docker and filesystem scanning workflow used to identify CVEs in codebases. Includes vulnerability classification, weekly report format, and escalation process.</p>
+        <p class="proj-desc">Trivy-based Docker and filesystem scanning workflow used to identify CVEs in development team codebases. Includes vulnerability classification, weekly report format, and escalation process.</p>
         <div class="proj-outcomes">
           <span class="proj-outcome">Trivy scans on Dockerfiles and FS</span>
-          <span class="proj-outcome">Structured reports</span>
+          <span class="proj-outcome">Structured reports to 3 teams weekly</span>
         </div>
         <div class="proj-stack">
           <span class="stack-tag">Trivy</span><span class="stack-tag">Docker</span>
@@ -339,7 +352,6 @@
   </div>
 </section>
 
-
 <section id="certifications" class="z1">
   <div class="container">
     <div class="section-label">05 / Certifications</div>
@@ -353,7 +365,6 @@
         <div class="cert-issuer">ISC2</div>
         <span class="cert-status">Verified</span>
       </div>
-
 
       <div class="cert-card">
         <a href="https://www.credly.com/badges/b35ea527-9040-4a41-97da-bb74ba986643/public_url" target="_blank" rel="noopener" class="credly-badge-wrap">
@@ -416,9 +427,9 @@
           I would be glad to hear from you.
         </p>
         <div class="contact-links">
-          <a href="mailto:sivanesa2016@gmail.com " class="contact-link">
+          <a href="mailto:sivanesa20016@gmail.com" class="contact-link">
             <span class="contact-link-type">@</span>
-            sivanesa2016@gmail.com
+             sivanesa2016@gmail.com
           </a>
           <a href="tel:+916383225887" class="contact-link">
             <span class="contact-link-type">#</span>
@@ -440,6 +451,7 @@
       </div>
 
       <div class="contact-col right">
+       
         <form id="contact-form"
               action="https://formspree.io/f/maqpglqa"
               method="POST"
@@ -485,10 +497,4 @@
     <div class="footer-meta" style="margin-top:3px;">Cybersecurity Analyst &nbsp;·&nbsp; SOC Analyst &nbsp;·&nbsp; Coimbatore, India</div>
   </div>
   <div class="footer-meta">
-    Hosted on GitHub Pages &nbsp;·&nbsp; github.com/Sivanesan17
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
-</body>
-</html>
+    Hosted on GitHub Pages &nbsp;·&nbs
